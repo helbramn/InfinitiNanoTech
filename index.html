@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa de Órganos - Inicio</title>
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8; /* Fondo gris claro */
+      color: #333; /* Color de texto principal */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      padding: 0.9% 0;
+      background-color: #1abc9c; /* Fondo verde */
+      color: #fff; /* Texto blanco */
+    }
+
+    .nav {
+      background-color: #3498db; /* Fondo azul */
+      color: #fff; /* Texto blanco */
+      padding: 0.9% 0;
+      text-align: center;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav li {
+      display: inline;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.9% 4%;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav a.active {
+      background-color: #1abc9c; /* Fondo verde para elemento activo */
+    }
+
+    .nav a:hover {
+      background-color: #555; /* Fondo oscuro al pasar el ratón */
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .highlight {
+      text-align: center;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .highlight img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 0.4%;
+      background-color: #1abc9c; /* Fondo verde */
+      color: #fff; /* Texto blanco */
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 10%;
+      height: 100%;
+      background-color: #ddd;
+      padding: 20px;
+    }
+
+    .nav-menu {
+      margin-top: 20px; /* Espacio entre el navbar y el menú de la cuenta */
+      position: fixed; /* Fijar el menú a la izquierda */
+      top: 0; /* Posición desde la parte superior */
+      left: 0; /* Posición desde la izquierda */
+      width: 10%; /* Ancho del 10% de la pantalla */
+      background-color: #ddd; /* Color de fondo */
+      padding: 20px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Empresa de Órganos</h1>
+</header>
+
+<nav class="nav">
+  <ul>
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="proyecto.html">Proyecto</a></li>
+    <li><a href="sobre.html">Sobre Nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="#" id="menuButton">MENU</a></li>
+  </ul>
+
+</nav>
+
+<main class="main">
+  <div class="highlight">
+    <h2>Bienvenido a la Empresa de Órganos</h2>
+    <img src="proyecto.jpg" alt="Proyecto de Órganos Artificiales">
+    <p>Descripción breve de la empresa y su proyecto.</p>
+  </div>
+  <div class="nav-menu" id="menu">
+    <ul>
+      <li><a href="perfil.html">Perfil</a></li>
+      <li><a href="configuracion.html">Configuración</a></li>
+      <li><a href="logout.html">Cerrar Sesión</a></li>
+      <!-- Agrega más elementos de menú si es necesario -->
+    </ul>
+  </div>
+
+  <div class="sidebar">
+    <div class="ad">
+      <h3>Anuncios</h3>
+      <p>Aquí puedes colocar anuncios o contenido relevante de tu empresa.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2024 Empresa de Órganos. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
