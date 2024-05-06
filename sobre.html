@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa de Órganos - Sobre Nosotros</title>
+  <!-- CSS -->
+  <style>
+    @media (min-width: 1024px) {
+    }
+    @media (max-width: 1023px) and (min-width: 768px) {
+    }
+    @media (max-width: 767px) {
+    }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8; /* Fondo gris claro */
+        color: #333; /* Color de texto principal */
+      }
+
+      /* Estilos para el encabezado */
+      .header {
+        text-align: center;
+        padding: 0.9% 0;
+        background-color: #1abc9c; /* Fondo verde */
+        color: #fff; /* Texto blanco */
+      }
+
+      /* Estilos para el barra de navegación */
+      .nav {
+        background-color: #3498db; /* Fondo azul */
+        color: #fff; /* Texto blanco */
+        padding: 0.9% 0;
+      }
+
+      .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .nav li {
+        display: inline;
+      }
+
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.9% 4%;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav a.active {
+        background-color: #1abc9c; /* Fondo verde para elemento activo */
+      }
+
+      .nav a:hover {
+        background-color: #555; /* Fondo oscuro al pasar el ratón */
+      }
+
+      /* Estilos para el contenido principal */
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      /* Estilos para la sección "Nosotros" */
+      .about {
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .about img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      /* Estilos para el footer */
+      .footer {
+        text-align: center;
+        padding: 0.9%;
+        background-color: #1abc9c; /* Fondo verde */
+        color: #fff; /* Texto blanco */
+        position: fixed; /* Cambiar de absolute a fixed */
+        bottom: 0;
+        width: 100%;
+      }
+
+    /* Estilos para el contenido principal */
+    .main {
+      min-height: calc(100vh - 110px); /* Restar el espacio ocupado por el header y el footer */
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Empresa de Órganos</h1>
+</header>
+
+<nav class="nav">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="proyecto.html">Proyecto</a></li>
+    <li><a href="sobre.html" class="active">Sobre Nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<main class="main">
+  <div class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>Información sobre nuestra empresa y el equipo de trabajo.</p>
+  </div>
+  <!-- Agregar más información sobre la empresa aquí -->
+</main>
+
+<footer class="footer">
+  <p>&copy; 2024 Empresa de Órganos. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
