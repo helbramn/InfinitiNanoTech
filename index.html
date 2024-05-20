@@ -28,7 +28,6 @@
       background-color: #3498db; /* Fondo azul */
       color: #fff; /* Texto blanco */
       padding: 0.9% 0;
-      text-align: center;
     }
 
     .nav ul {
@@ -100,16 +99,88 @@
     }
 
     .nav-menu {
-      margin-top: 20px; /* Espacio entre el navbar y el menú de la cuenta */
-      position: fixed; /* Fijar el menú a la izquierda */
-      top: 0; /* Posición desde la parte superior */
-      left: 0; /* Posición desde la izquierda */
-      width: 10%; /* Ancho del 10% de la pantalla */
-      background-color: #ddd; /* Color de fondo */
-      padding: 20px;
+      margin-top: 0.9%;
+      position: absolute;
+      top: 16.4%;
+      left: 0;
+      width: 100%;
+      background-color: #ddd;
+      padding: 0.245%;
+      height: auto;
     }
 
+    #menuButton {
+      margin-right: 10%;
+    }
 
+    .nav-menu {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .nav ul li:not(:first-child) {
+        display: none; /* Oculta todos los elementos li excepto el primero (MENU) */
+      }
+
+      .nav a {
+        font-size: 14px; /* Tamaño de fuente más pequeño para el navbar en dispositivos móviles */
+      }
+
+      .nav {
+        padding-top: 3%; /* Ajusta el espacio superior del navbar */
+      }
+      .nav-menu {
+        margin-top: 0.9%;
+        position: absolute;
+        top: 16.4%;
+        left: 0;
+        width: 100%;
+        background-color: #ddd;
+        padding: 0.245%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        padding: 10px 0;
+      }
+      .sidebar {
+        display: none;
+      }
+
+      .nav ul {
+        flex-direction: row; /* Mostrar los elementos en una fila */
+      }
+
+      .nav a {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        padding: 0.9% 2%; /* Ajustar el espaciado */
+      }
+
+      .highlight {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .highlight img {
+        width: 100%;
+      }
+      .nav-menu {
+        margin-top: 0.9%;
+        position: absolute;
+        top: 16.4%;
+        left: 0;
+        width: 100%;
+        background-color: #ddd;
+        padding: 0.245%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -120,28 +191,19 @@
 
 <nav class="nav">
   <ul>
-    <li><a href="index.html" class="active">Inicio</a></li>
-    <li><a href="proyecto.html">Proyecto</a></li>
-    <li><a href="sobre.html">Sobre Nosotros</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
     <li><a href="#" id="menuButton">MENU</a></li>
+    <li class="nav-item"><a href="index.html" class="active">Inicio</a></li>
+    <li class="nav-item"><a href="proyecto.html">Proyecto</a></li>
+    <li class="nav-item"><a href="sobre.html">Sobre Nosotros</a></li>
+    <li class="nav-item"><a href="contacto.html">Contacto</a></li>
   </ul>
-
 </nav>
 
 <main class="main">
   <div class="highlight">
     <h2>Bienvenido a la Empresa de Órganos</h2>
     <img src="proyecto.jpg" alt="Proyecto de Órganos Artificiales">
-    <p>Descripción breve de la empresa y su proyecto.</p>
-  </div>
-  <div class="nav-menu" id="menu">
-    <ul>
-      <li><a href="perfil.html">Perfil</a></li>
-      <li><a href="configuracion.html">Configuración</a></li>
-      <li><a href="logout.html">Cerrar Sesión</a></li>
-      <!-- Agrega más elementos de menú si es necesario -->
-    </ul>
+    <p>Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.Descripción breve de la empresa y su proyecto.</p>
   </div>
 
   <div class="sidebar">
@@ -150,11 +212,63 @@
       <p>Aquí puedes colocar anuncios o contenido relevante de tu empresa.</p>
     </div>
   </div>
+
+  <div class="nav-menu" id="menu">
+    <ul>
+      <li><a href="perfil.html">Perfil</a></li>
+      <li><a href="logout.html">Cerrar Sesión</a></li>
+    </ul>
+    <ul id="mobileLinks">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="proyecto.html">Proyecto</a></li>
+      <li><a href="sobre.html">Sobre Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
 </main>
 
 <footer class="footer">
   <p>&copy; 2024 Empresa de Órganos. Todos los derechos reservados.</p>
 </footer>
+
+<!-- JavaScript -->
+<script>
+  document.getElementById('menuButton').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    var additionalLinks = document.getElementById('mobileLinks');
+
+    if (menu.style.display === 'none' || menu.style.display === '') {
+      menu.style.display = 'block';
+
+      // Mostrar los enlaces adicionales en el menú
+      additionalLinks.style.display = 'block';
+
+      // Animación de apertura
+      menu.animate([
+        { opacity: '0' }, // Desde la transparencia
+        { opacity: '1' } // Hasta la opacidad completa
+      ], {
+        duration: 500, // Duración de la animación en milisegundos
+        easing: 'ease-out' // Función de aceleración (puedes probar otras como 'ease-in-out')
+      });
+    } else {
+      // Animación de cierre
+      menu.animate([
+        { opacity: '1' }, // Desde la opacidad completa
+        { opacity: '0' } // Hasta la transparencia
+      ], {
+        duration: 500, // Duración de la animación
+        easing: 'ease-out' // Función de aceleración
+      });
+
+      // Ocultar el menú después de la animación
+      setTimeout(function() {
+        menu.style.display = 'none';
+        additionalLinks.style.display = 'none'; // Ocultar los enlaces adicionales
+      }, 500);
+    }
+  });
+</script>
 
 </body>
 </html>
