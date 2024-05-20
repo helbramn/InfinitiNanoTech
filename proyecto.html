@@ -6,21 +6,17 @@
   <title>Empresa de Órganos - Proyecto</title>
   <!-- CSS -->
   <style>
-    @media (min-width: 1024px) {
-    }
-    @media (max-width: 1023px) and (min-width: 768px) {
-    }
-    @media (max-width: 767px) {
-    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f8f8f8; /* Fondo gris claro */
       color: #333; /* Color de texto principal */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    /* Estilos para el encabezado */
     .header {
       text-align: center;
       padding: 0.9% 0;
@@ -28,7 +24,6 @@
       color: #fff; /* Texto blanco */
     }
 
-    /* Estilos para el barra de navegación */
     .nav {
       background-color: #3498db; /* Fondo azul */
       color: #fff; /* Texto blanco */
@@ -39,7 +34,6 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
     .nav li {
@@ -61,7 +55,6 @@
       background-color: #555; /* Fondo oscuro al pasar el ratón */
     }
 
-    /* Estilos para el contenido principal */
     .main {
       display: flex;
       justify-content: center;
@@ -70,7 +63,6 @@
       padding: 20px;
     }
 
-    /* Estilos para la sección del proyecto */
     .project {
       text-align: center;
       margin: 20px;
@@ -86,20 +78,88 @@
       margin-bottom: 10px;
     }
 
-    /* Estilos para el footer */
     .footer {
       text-align: center;
-      padding: 0.9%;
+      padding: 0.4%;
       background-color: #1abc9c; /* Fondo verde */
       color: #fff; /* Texto blanco */
-      position: fixed; /* Cambiar de absolute a fixed */
+      position: fixed;
       bottom: 0;
       width: 100%;
     }
 
-    /* Estilos para el contenido principal */
-    .main {
-      min-height: calc(100vh - 110px); /* Restar el espacio ocupado por el header y el footer */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 10%;
+      height: 100%;
+      background-color: #ddd;
+      padding: 20px;
+    }
+
+    .nav-menu {
+      margin-top: 0.9%;
+      position: absolute;
+      top: 16.4%;
+      left: 0;
+      width: 100%;
+      background-color: #ddd;
+      padding: 0.245%;
+      height: auto;
+    }
+
+    #menuButton {
+      margin-right: 10%;
+    }
+
+    .nav-menu {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .nav ul li:not(:first-child) {
+        display: none; /* Oculta todos los elementos li excepto el primero (MENU) */
+      }
+
+      .nav a {
+        font-size: 14px; /* Tamaño de fuente más pequeño para el navbar en dispositivos móviles */
+      }
+
+      .nav {
+        padding-top: 5%; /* Ajusta el espacio superior del navbar */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        padding: 10px 0;
+      }
+      .sidebar {
+        display: none;
+      }
+
+      .nav ul {
+        flex-direction: row; /* Mostrar los elementos en una fila */
+      }
+
+      .nav a {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        padding: 0.9% 2%; /* Ajustar el espaciado */
+      }
+
+      .project {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .project img {
+        width: 100%;
+      }
     }
 
   </style>
@@ -112,7 +172,8 @@
 
 <nav class="nav">
   <ul>
-    <li><a href="index.html" >Inicio</a></li>
+    <li><a href="#" id="menuButton">MENU</a></li>
+    <li><a href="index.html">Inicio</a></li>
     <li><a href="proyecto.html" class="active">Proyecto</a></li>
     <li><a href="sobre.html">Sobre Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
@@ -129,9 +190,64 @@
   <!-- Agregar más información del proyecto aquí -->
 </main>
 
+<div class="sidebar">
+  <div class="ad">
+    <h3>Anuncios</h3>
+    <p>Aquí puedes colocar anuncios o contenido relevante de tu empresa.</p>
+  </div>
+</div>
+
+<div class="nav-menu" id="menu">
+  <ul>
+    <li><a href="perfil.html">Perfil</a></li>
+    <li><a href="logout.html">Cerrar Sesión</a></li>
+  </ul>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="proyecto.html" class="active">Proyecto</a></li>
+    <li><a href="sobre.html">Sobre Nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</div>
+
 <footer class="footer">
   <p>&copy; 2024 Empresa de Órganos. Todos los derechos reservados.</p>
 </footer>
+
+<!-- JavaScript -->
+<script>
+  // JavaScript para el menú
+  document.getElementById('menuButton').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+
+    if (menu.style.display === 'none' || menu.style.display === '') {
+      menu.style.display = 'block';
+
+      // Animación de apertura
+      menu.animate([
+        { opacity: '0' }, // Desde la transparencia
+        { opacity: '1' } // Hasta la opacidad completa
+      ], {
+        duration: 500, // Duración de la animación en milisegundos
+        easing: 'ease-out' // Función de aceleración (puedes probar otras como 'ease-in-out')
+      });
+    } else {
+      // Animación de cierre
+      menu.animate([
+        { opacity: '1' }, // Desde la opacidad completa
+        { opacity: '0' } // Hasta la transparencia
+      ], {
+        duration: 500, // Duración de la animación
+        easing: 'ease-out' // Función de aceleración
+      });
+
+      // Ocultar el menú después de la animación
+      setTimeout(function() {
+        menu.style.display = 'none';
+      }, 300);
+    }
+  });
+</script>
 
 </body>
 </html>
