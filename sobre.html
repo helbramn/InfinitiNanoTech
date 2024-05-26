@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empresa de Órganos - Sobre Nosotros</title>
+  <title>InfinitiNanotech - Sobre Nosotros</title>
   <!-- CSS -->
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Calibri, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8; /* Fondo gris claro */
-      color: #333; /* Color de texto principal */
+      background-color: #f8f8f8;
+      color: #333;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -58,13 +58,13 @@
     .main {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start; /* Cambiado para alinear el contenido al inicio */
       flex-wrap: wrap;
       padding: 20px;
     }
 
     .about {
-      text-align: center;
+      text-align: left;
       margin: 20px;
       padding: 20px;
       background-color: #fff;
@@ -73,9 +73,10 @@
     }
 
     .about img {
-      width: 200px;
+      width: 30%;
       height: auto;
-      margin-bottom: 10px;
+      margin: 0;
+      display: block;
     }
 
     .footer {
@@ -92,16 +93,22 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 10%;
+      width: 15%;
       height: 100%;
       background-color: #ddd;
       padding: 20px;
     }
 
+    .logo {
+      width: 300%; /* Tamaño del logotipo, un 20% menor que el header */
+      height: auto; /* Altura automática para mantener la proporción */
+      max-width: 170px; /* Ajusta el tamaño máximo */
+    }
+
     .nav-menu {
       margin-top: 0.9%;
       position: absolute;
-      top: 16.4%;
+      top: 23.8%;
       left: 0;
       width: 100%;
       background-color: #ddd;
@@ -113,9 +120,22 @@
       margin-right: 10%;
     }
 
+    #sidebarButton {
+      margin-left: 10%;
+    }
+
+    #showSidebarButton {
+      color: #fff;
+    }
+
+    #showSidebarButton:hover {
+      background-color: #555;
+    }
+
     .nav-menu {
       display: none;
     }
+
     @media (max-width: 768px) {
       .sidebar {
         display: none;
@@ -129,9 +149,10 @@
         font-size: 14px; /* Tamaño de fuente más pequeño para el navbar en dispositivos móviles */
       }
       .nav {
-        padding-top: 5%; /* Ajusta el espacio superior del navbar */
+        padding-top: 3%; /* Ajusta el espacio superior del navbar */
       }
     }
+
     @media (max-width: 480px) {
       .header {
         padding: 10px 0;
@@ -165,7 +186,7 @@
 <body>
 
 <header class="header">
-  <h1>Empresa de Órganos</h1>
+  <img src="logo.png" alt="InfinitiNanotech Logo" class="logo">
 </header>
 
 <nav class="nav">
@@ -175,14 +196,12 @@
     <li><a href="proyecto.html">Proyecto</a></li>
     <li><a href="sobre.html" class="active">Sobre Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
+    <li style="float: right; margin-right: 10%;"> <a href="#" id="showSidebarButton">»</a></li>
   </ul>
 </nav>
 
-<!-- Lista de enlaces adicionales para dispositivos móviles -->
 <div class="nav-menu" id="menu">
   <ul>
-    <li><a href="perfil.html">Perfil</a></li>
-    <li><a href="logout.html">Cerrar Sesión</a></li>
   </ul>
   <ul>
     <li><a href="index.html">Inicio</a></li>
@@ -195,19 +214,33 @@
 <main class="main">
   <div class="about">
     <h2>Sobre Nosotros</h2>
-    <p>Información sobre nuestra empresa y el equipo de trabajo.</p>
+    <p>InfinitiNanotech fue fundada por un grupo de talentosos alumnos de la universidad MSMK, como parte de un proyecto innovador propuesto por varios profesores durante su curso. La idea surgió de la necesidad de abordar la escasez de órganos para trasplantes, y a partir de ahí, el equipo comenzó a desarrollar tecnología de vanguardia en bioingeniería y nanotecnología.</p>
+
+    <h3>Nuestro Origen</h3>
+    <p>La empresa comenzó como un proyecto académico, donde los estudiantes combinaron sus conocimientos en biotecnología, ingeniería y negocios para crear una solución viable a un problema global. Con el apoyo de sus profesores y el acceso a laboratorios de última generación, los alumnos transformaron una idea de clase en una empresa que hoy lidera la innovación en la creación de órganos artificiales.</p>
+
+    <h3>El Equipo Fundador</h3>
+    <p>El equipo fundador está compuesto por especialistas en bioingeniería, nanotecnología y gestión empresarial, todos ellos exalumnos de MSMK. Su diversa experiencia y pasión por la innovación han sido cruciales para el éxito de InfinitiNanotech.</p>
+
+    <h3>Logros y Reconocimientos</h3>
+    <p>Desde su creación, InfinitiNanotech ha recibido numerosos premios y reconocimientos en el ámbito de la biotecnología. Nuestro proyecto LifeInfinitiEra ha sido galardonado por su innovación y potencial para cambiar el futuro de la medicina.</p>
+
+    <img src="imagen6.jpg" alt="MSMK">
   </div>
 
   <div class="sidebar">
+    <button id="sidebarButton">»</button>
     <div class="ad">
-      <h3>Anuncios</h3>
-      <p>Aquí puedes colocar anuncios o contenido relevante de tu empresa.</p>
+      <h3>Proyecto Destacado</h3>
+      <p><strong>LifeInfinitiEra:</strong> Nuestro proyecto estrella en la creación de órganos artificiales usando nanotecnología avanzada. Este proyecto ha sido premiado por su innovación y potencial para salvar vidas. Haz clic <a href="proyecto.html">aquí</a></p>
+      <h3>Contacta con Nosotros</h3>
+      <p>Si tienes alguna pregunta o deseas más información, no dudes en <a href="contacto.html">contactarnos</a>.</p>
     </div>
   </div>
 </main>
 
 <footer class="footer">
-  <p>&copy; 2024 Empresa de Órganos. Todos los derechos reservados.</p>
+  <p>&copy; 2024 InfinitiNanotech. Todos los derechos reservados.</p>
 </footer>
 
 <!-- JavaScript -->
@@ -215,34 +248,88 @@
   // JavaScript para el menú
   document.getElementById('menuButton').addEventListener('click', function() {
     var menu = document.getElementById('menu');
+    var additionalLinks = document.getElementById('mobileLinks');
+
     if (menu.style.display === 'none' || menu.style.display === '') {
       menu.style.display = 'block';
-
-      // Animación de apertura
+      additionalLinks.style.display = 'block';
       menu.animate([
-        { opacity: '0' }, // Desde la transparencia
-        { opacity: '1' } // Hasta la opacidad completa
+        { opacity: '0' },
+        { opacity: '1' }
       ], {
-        duration: 500, // Duración de la animación en milisegundos
-        easing: 'ease-out' // Función de aceleración (puedes probar otras como 'ease-in-out')
+        duration: 500,
+        easing: 'ease-out'
       });
     } else {
-      // Animación de cierre
       menu.animate([
-        { opacity: '1' }, // Desde la opacidad completa
-        { opacity: '0' } // Hasta la transparencia
+        { opacity: '1' },
+        { opacity: '0' }
       ], {
-        duration: 500, // Duración de la animación
-        easing: 'ease-out' // Función de aceleración
+        duration: 500,
+        easing: 'ease-out'
       });
 
-      // Ocultar el menú después de la animación
       setTimeout(function() {
         menu.style.display = 'none';
-      }, 500); // Ajuste del tiempo para que coincida con la duración de la animación
+        additionalLinks.style.display = 'none';
+      }, 500);
     }
   });
-</script>
 
+  // JavaScript para el sidebar
+  document.getElementById('sidebarButton').addEventListener('click', function() {
+    var sidebar = document.querySelector('.sidebar');
+
+    if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+      sidebar.style.display = 'block';
+      sidebar.animate([
+        {opacity: '0'},
+        {opacity: '1'}
+      ], {
+        duration: 500,
+        easing: 'ease-out'
+      });
+    } else {
+      sidebar.animate([
+        {opacity: '1'},
+        {opacity: '0'}
+      ], {
+        duration: 500,
+        easing: 'ease-out'
+      });
+
+      setTimeout(function () {
+        sidebar.style.display = 'none';
+      }, 500);
+    }
+  });
+  document.getElementById('showSidebarButton').addEventListener('click', function() {
+    var sidebar = document.querySelector('.sidebar');
+
+    if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+      sidebar.style.display = 'block';
+      sidebar.animate([
+        {opacity: '0'},
+        {opacity: '1'}
+      ], {
+        duration: 500,
+        easing: 'ease-out'
+      });
+    } else {
+      sidebar.animate([
+        {opacity: '1'},
+        {opacity: '0'}
+      ], {
+        duration: 500,
+        easing: 'ease-out'
+      });
+
+      setTimeout(function () {
+        sidebar.style.display = 'none';
+      }, 500);
+    }
+  });
+
+</script>
 </body>
 </html>
